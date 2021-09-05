@@ -24,7 +24,7 @@ def add():
     if 'op1' in request.args.keys() and 'op2' in request.args.keys():
         a = int(request.args['op1'])
         b = int(request.args['op2'])
-        return jsonify({"operand 1": a, "operand 2": b, "sum":a+b}) #return JSON object
+        return jsonify({"operand 1": a, "operand 2": b, "sum":a+b+1}) #return JSON object
     else:
         return jsonify({'error':'missing parameter(s)'}), 400
     
